@@ -1,0 +1,132 @@
+version: "3.1"
+
+nlu:
+- intent: inform
+  examples: |
+    - [barangay id](document)
+    - [barangay clearance](document)
+    - [certificate of indigency](document)
+    - [business permit](document)
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: fil_greet
+  examples: |
+    - kamusta
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good bye
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: fil_goodbye
+  examples: |
+    - paalam
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_request
+  examples: |
+    - how to request documents?
+    - how can i request documents?
+    - how to get documents?
+    - how can i apply for a document?
+
+- intent: request_docs
+  examples: |
+    - how can i request for [barangay id](document)?
+    - how to get a [barangay clearance](document)?
+    - how can i apply for [business permit](document)?
+    - i want to request [certificate of indigency]
+
+- intent: thanks
+  examples: |
+    - Thank you for helping me
+    - Thanks
+    - Thank you
+    - Ty
+    - Thankyou
+    - Thanks for the help
+    - Tysm
+    - Thank you so much
+
+- intent: ask_requirements
+  examples: |
+    - What are the needed requirements for [business permit](document)?
+    - What requirements do i need to submit to get [barangay clearance](document)?
+    - What do i need to submit for [certificate of indigency](document)?
+    - What should i submit if im going to request for [barangay id](document)?
+
+- intent: ask_processing_time
+  examples: |
+    - How many days would it take for me to claim my Document Request? 
+    - How many days would it take for me to claim my [barangay id](document)?
+    - When can i pick up my document? 
+    - When can i pick up my [certificate of indigency](document)?
+    - How long is the processing time of the documents?
+    - How long is the processing time of [business permit](document?
+    - How long till i get my request?
+    - How long till i get my [barangay clearance](document)?
+
+- intent: claim_document
+  examples: |
+    - How can I claim my requested document?
+    - How can i claim my requested [barangay id](document)?
+    - How to get my [certificate of indgency](document)?
+    - Where do i claim my [business permit](document)?
+    - What is the process of claiming my document request?
+    - What is the process of claiming my [barangay clearance](document)?
+
+- intent: report_concern
+  examples: |
+    - How can I report a concern here?
+    - What is the process of reporting concern?
+    - What to do if i want to report my concern?
+    - What should i do to report my concern?
+    - How can i file a report?

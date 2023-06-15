@@ -1,0 +1,81 @@
+version: "3.1"
+
+intents:
+  - greet
+  - fil_greet
+  - goodbye
+  - fil_goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_request
+  - inform
+  - request_docs
+  - thanks
+  - ask_requirements
+  - ask_processing_time
+  - claim_document
+  - report_concern
+
+entities:
+  - document
+
+slots:
+  document:
+    type: categorical
+    values:
+      - barangay id
+      - barangay clearance
+      - certificate of indigency
+      - business permit
+    mappings: 
+    - type: from_entity
+      entity: document
+
+responses:
+  utter_greet:
+  - text: "Hello, I am SAM. How can I help you today?"
+  
+  utter_fil_greet:
+  - text: "Hi! Kamusta ka?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_request_steps:
+  - text: "To request documents go to services > document request > choose the document you want to request > fill out the form > submit"
+
+  utter_welcome:
+  - text:  "You're welcome. If you have other questions, do not hesitate to chat with me. I am here to assist and answer you at any time of the day!"
+
+  utter_ask_document:
+  - text: "what type of document?"
+
+  utter_processing_time:
+  - text: " Usually, these requested documents are processed within 3-5 business days. To track the progress of your requested document, just click “Services” to see your transactions"
+
+  utter_claim_document:
+  - text: "If the status of your requested document is \"Ready for pick up\", you may claim it at Barangay Commonwealth on your desired schedule. Just ask any barangay personnel on which line you should take to claim your document."
+  
+  utter_report_process:
+  - text: "If you want to report a concern, kindly check the sidebar. Click the \"Services\" button. Then click the report concern button. You will be directed to a page where you can report a concern. Fill out all the blank fields and then upload the image of concern. After you comply with all the needed information, you can now click the \"submit\" button. I hope this information works well for you."
+
+  utter_ask_again:
+  - text: "I'm sorry if it did not help your concern. Would you like to ask me a question again?"
+
+actions:
+  - steps_request
+  - requirements_needed
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

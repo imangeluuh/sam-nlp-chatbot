@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: request document
+  steps:
+  - intent: ask_request
+  - action: utter_ask_document
+  - intent: inform
+  - action: steps_request
+  - action: utter_did_that_help
+
+- story: 
+  steps:
+  - intent: request_docs
+  - action: steps_request
+
+- story: helps
+  steps:
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: does not help
+  steps:
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_again
+
+- story: what requirements are needed
+  steps:
+  - intent: ask_requirements
+  - action: requirements_needed
+
+- story: processing time
+  steps:
+  - intent: ask_processing_time
+  - action: utter_processing_time
+
+- story: how to claim
+  steps:
+  - intent: claim_document
+  - action: utter_claim_document
+
+- story: report concern
+  steps:
+  - intent: report_concern
+  - action: utter_report_process
+
