@@ -7,18 +7,42 @@ stories:
   - intent: greet
   - action: utter_greet
 
-- story: request document
+- story: request document provided
+  steps:
+  - intent: request_docs
+  - slot_was_set:
+    - document: barangay id
+  - action: steps_request
+
+- story: request document not provided
   steps:
   - intent: ask_request
   - action: utter_ask_document
-  - intent: inform
+  - intent: inform_document
   - action: steps_request
+
+- story: change profile
+  steps:
+  - intent: change_profile
+  - slot_was_set:
+    - profile: name
+  - action: change_profile_steps
   - action: utter_did_that_help
 
-- story: 
+- story: change profile
   steps:
-  - intent: request_docs
+  - intent: change_profile
+  - action: utter_provide_profile
+  - intent: inform_profile
+  - action: change_profile_steps
+
+
+- story: ask if it helps
+  steps:
   - action: steps_request
+  - slot_was_set:
+    - document: barangay id
+  - action: utter_did_that_help
 
 - story: helps
   steps:

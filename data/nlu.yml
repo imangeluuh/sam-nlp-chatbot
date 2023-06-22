@@ -1,12 +1,24 @@
 version: "3.1"
 
 nlu:
-- intent: inform
+- intent: inform_document
   examples: |
     - [barangay id](document)
     - [barangay clearance](document)
     - [certificate of indigency](document)
     - [business permit](document)
+
+- intent: inform_profile
+  examples: |
+    - [name](profile)
+    - [first name](profile)
+    - [last name](profile)
+    - [birthday](profile)
+    - [birthdate](profile)
+    - [email](profile)
+    - [address](profile)
+    - [password](profile)
+    - [pass](profile)
 
 - intent: greet
   examples: |
@@ -77,13 +89,20 @@ nlu:
     - how can i request documents?
     - how to get documents?
     - how can i apply for a document?
+    - i want to request documents
+    - i would like to request a document
+    - how to request
+    - i need documents
+    - i want a document
 
 - intent: request_docs
   examples: |
     - how can i request for [barangay id](document)?
     - how to get a [barangay clearance](document)?
     - how can i apply for [business permit](document)?
-    - i want to request [certificate of indigency]
+    - i want to request [certificate of indigency](document)
+    - i want a [barangay id](document)
+    - i need a [business permit](document)
 
 - intent: thanks
   examples: |
@@ -130,3 +149,15 @@ nlu:
     - What to do if i want to report my concern?
     - What should i do to report my concern?
     - How can i file a report?
+    - i want to complain
+    - i want to file a complaint
+    - How do i file a complaint
+    - i want to report
+
+- intent: change_profile
+  examples: |
+    - i want to change my profile
+    - how can i change my profile
+    - how can i change my information
+    - how do i change my profile 
+    - where can i change my information
