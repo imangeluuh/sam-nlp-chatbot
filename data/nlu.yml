@@ -36,10 +36,6 @@ nlu:
     - goodevening
     - good afternoon
 
-- intent: fil_greet
-  examples: |
-    - kamusta
-
 - intent: goodbye
   examples: |
     - cu
@@ -52,10 +48,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-- intent: fil_goodbye
-  examples: |
-    - paalam
 
 - intent: affirm
   examples: |

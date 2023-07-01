@@ -2,23 +2,24 @@ version: "3.1"
 
 intents:
   - greet
-  - fil_greet
   - goodbye
-  - fil_goodbye
   - affirm
   - deny
   - bot_challenge
   - ask_request
-  - inform
+  - inform_document
+  - inform_profile
   - request_docs
   - thanks
   - ask_requirements
   - ask_processing_time
   - claim_document
   - report_concern
+  - change_profile
 
 entities:
   - document
+  - profile
 
 slots:
   document:
@@ -31,13 +32,26 @@ slots:
     mappings: 
     - type: from_entity
       entity: document
+    influence_conversation: true
+    
+  profile:
+    type: categorical
+    values:
+      - name
+      - first name
+      - last name
+      - birthday
+      - birthdate
+      - email
+      - address
+    mappings: 
+    - type: from_entity
+      entity: profile
+    influence_conversation: true
 
 responses:
   utter_greet:
   - text: "Hello, I am SAM. How can I help you today?"
-  
-  utter_fil_greet:
-  - text: "Hi! Kamusta ka?"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -72,9 +86,13 @@ responses:
   utter_ask_again:
   - text: "I'm sorry if it did not help your concern. Would you like to ask me a question again?"
 
+  utter_provide_profile:
+  - text: "What information do you want to change?"
+
 actions:
   - steps_request
   - requirements_needed
+  - change_profile_steps
 
 session_config:
   session_expiration_time: 60
