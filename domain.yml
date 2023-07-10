@@ -16,6 +16,21 @@ intents:
   - claim_document
   - report_concern
   - change_profile
+  - f_greet
+  - f_goodbye
+  - f_affirm
+  - f_deny
+  - f_bot_challenge
+  - f_ask_request
+  - f_inform_document
+  - f_inform_profile
+  - f_request_docs
+  - f_thanks
+  - f_ask_requirements
+  - f_ask_processing_time
+  - f_claim_document
+  - f_report_concern
+  - f_change_profile
 
 entities:
   - document
@@ -75,10 +90,10 @@ responses:
   - text: "what type of document?"
 
   utter_processing_time:
-  - text: " Usually, these requested documents are processed within 3-5 business days. To track the progress of your requested document, just click “Services” to see your transactions"
+  - text: "Usually, these requested documents are processed within 3-5 business days. To track the progress of your requested document, just click “Services” to see your transactions"
 
   utter_claim_document:
-  - text: "If the status of your requested document is \"Ready for pick up\", you may claim it at Barangay Commonwealth on your desired schedule. Just ask any barangay personnel on which line you should take to claim your document."
+  - text: "If the status of your requested document is \"Ready for pick up\", you may claim it at Barangay Commonwealth on your desired schedule. Just ask any barangay personnel where the clearance department is located."
   
   utter_report_process:
   - text: "If you want to report a concern, kindly check the sidebar. Click the \"Services\" button. Then click the report concern button. You will be directed to a page where you can report a concern. Fill out all the blank fields and then upload the image of concern. After you comply with all the needed information, you can now click the \"submit\" button. I hope this information works well for you."
@@ -88,6 +103,43 @@ responses:
 
   utter_provide_profile:
   - text: "What information do you want to change?"
+
+  # tagalog reponses
+  utter_f_greet:
+  - text: "Kamusta, ako si SAM. Paano kita matutulungan?"
+
+  utter_f_did_that_help:
+  - text: "Nakatulong ba ito sa iyo?"
+
+  utter_f_goodbye:
+  - text: "Paalam"
+
+  utter_f_iamabot:
+  - text: "Ako ay isang bot na pinapagana ng Rasa."
+
+  utter_f_request_steps:
+  - text: "Upang humiling ng mga dokumento, pumunta sa Mga Serbisyo > Mag request ng Dokumento > piliin ang dokumento na nais mong hilingin > punan ang form > isumite"
+
+  utter_f_welcome:
+  - text:  "Walang anuman. Kung mayroon ka pang ibang mga tanong, huwag mag-atubiling makipag-usap sa akin. Nandito ako upang tumulong at sagutin ang iyong mga tanong sa anumang oras ng araw!"
+
+  utter_f_ask_document:
+  - text: "Anong klase ng dokumento?"
+
+  utter_f_processing_time:
+  - text: "Ang mga hininging dokumento ay karaniwang inaasahang matapos sa loob ng 3-5 araw. Upang subaybayan ang pag-usad ng iyong hininging dokumento, i-click lamang ang 'Mga Serbisyo' upang makita ang iyong mga transaksyon."
+
+  utter_f_claim_document:
+  - text: "Kung ang status ng iyong hininging dokumento ay 'Ready for pick-up', maaari mong kunin ito sa Barangay Commonwealth sa iyong napiling oras. Tanungin lamang ang alinmang kawani ng barangay kung saan ang clearance department."
+  
+  utter_f_report_process:
+  - text: "Kung nais mong mag-ulat ng concern, pakitignan ang sidebar. I-click ang 'Mga Serbisyo'. Pagkatapos ay i-click ang button na 'Mag Report ng Concern'. Ikaw ay mapupunta sa isang pahina kung saan maaari kang mag-ulat ng iyong concern. Punan ang lahat ng mga blangkong field at pagkatapos ay mag-upload ng larawan ng concern. Pagkatapos ay i-click ang 'Submit'"
+
+  utter_f_ask_again:
+  - text: "Paumanhin kung hindi nakatulong sa inyong katanungan. Gusto niyo bang magtanong ulit sa akin?"
+
+  utter_f_provide_profile:
+  - text: "Anong impormasyon ang nais niyong baguhin?"
 
 actions:
   - steps_request

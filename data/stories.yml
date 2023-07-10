@@ -76,3 +76,78 @@ stories:
   - intent: report_concern
   - action: utter_report_process
 
+# tagalog stories
+- story: fil greet
+  steps:
+  - intent: f_greet
+  - action: utter_f_greet
+
+- story: fil request document provided
+  steps:
+  - intent: f_request_docs
+  - slot_was_set:
+    - document: barangay id
+  - action: steps_request
+
+- story: fil request document not provided
+  steps:
+  - intent: f_ask_request
+  - action: utter_f_ask_document
+  - intent: inform_document
+  - action: steps_request
+
+- story: fil change profile provided
+  steps:
+  - intent: f_change_profile
+  - slot_was_set:
+    - profile: name
+  - action: change_profile_steps
+  - action: utter_f_did_that_help
+
+- story: fil change profile not provided
+  steps:
+  - intent: f_change_profile
+  - action: utter_f_provide_profile
+  - intent: inform_profile
+  - action: change_profile_steps
+
+
+- story: fil ask if it helps
+  steps:
+  - action: steps_request
+  - slot_was_set:
+    - document: barangay id
+  - action: utter_f_did_that_help
+
+- story: fil helps
+  steps:
+  - action: utter_f_did_that_help
+  - intent: f_affirm
+  - action: utter_happy
+
+- story: fil does not help
+  steps:
+  - action: utter_f_did_that_help
+  - intent: f_deny
+  - action: utter_f_ask_again
+
+- story: fil what requirements are needed
+  steps:
+  - intent: f_ask_requirements
+  - action: requirements_needed
+
+- story: fil processing time
+  steps:
+  - intent: f_ask_processing_time
+  - action: utter_f_processing_time
+
+- story: fil how to claim
+  steps:
+  - intent: f_claim_document
+  - action: utter_f_claim_document
+
+- story: fil report concern
+  steps:
+  - intent: f_report_concern
+  - action: utter_f_report_process
+

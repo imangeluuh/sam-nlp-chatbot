@@ -16,3 +16,19 @@ rules:
   steps:
   - intent: thanks
   - action: utter_welcome
+
+# tagalog rules
+- rule: fil Say goodbye anytime the user says goodbye
+  steps:
+  - intent: f_goodbye
+  - action: utter_f_goodbye
+
+- rule: fil Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: f_bot_challenge
+  - action: utter_f_iamabot
+
+- rule: fil Say welcome anytime the user says thank you
+  steps:
+  - intent: f_thanks
+  - action: utter_f_welcome

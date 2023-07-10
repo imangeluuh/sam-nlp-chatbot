@@ -153,3 +153,100 @@ nlu:
     - how can i change my information
     - how do i change my profile 
     - where can i change my information
+
+# tagalog intents
+- intent: f_greet
+  examples: |
+    - kamusta ka
+    - musta ka
+    - mabuhay
+
+- intent: f_goodbye
+  examples: |
+    - paalam
+    - hanggang sa muli
+
+- intent: f_affirm
+  examples: |
+    - oo
+    - opo
+    - tama
+
+- intent: f_deny
+  examples: |
+    - hindi
+    - sa tingin ko hindi
+    - hindi ko gusto yan
+
+- intent: f_bot_challenge
+  examples: |
+    - bot ka ba?
+    - tao ka ba?
+    - nakikipagusap ba ako sa isang bot?
+    - nakikipagusap ba ako sa tao?
+
+- intent: f_ask_request
+  examples: |
+    - paano mag request ng document?
+    = paano ako makaka request ng dokumento?
+    - gusto ko mag request ng dokumento
+    - kailangan ko ng dokumento
+
+- intent: f_request_docs
+  examples: |
+    - paano mag reqeust ng [barangay id](document)?
+    - paano kumuha ng [barangay clearance](document)?
+    - gusto ko mag request ng [certificate of indigency](document)
+    - kailangan ko ng [business permit](document)
+
+- intent: f_thanks
+  examples: |
+    - Salamat
+    - Maraming salamat
+    - Salamat sa pagtulong sakin
+
+- intent: f_ask_requirements
+  examples: |
+    - Ano ang mga kailangan requirements sa [business permit](document)?
+    - Anong requirements ang kailangan kong i-submit para makakuha ng [barangay clearance](document)?
+    - Ano ang mga dapat kong i-submit sa pagkuha ng [barangay id](document)?
+
+- intent: f_ask_processing_time
+  examples: |
+    - Ilang araw bago ko makuha ang dokumento ko?
+    - Ilang araw bago ko makuha ang [barangay clearance](document)?
+    - Kailan ko pwede makuha ang dokumento ko
+    - Kailan ko pwede makuha ang [business permit](document) ko
+    - Gaano katagal i-process ang dokumento
+    - Gaano katagal i-process ang [barangay id](document) ko
+    - Gaano katagal bago ko makuha ang dokumento ko
+    - Gaano katagal bago ko makuha ang [certificate of indigency](document)?
+
+- intent: f_claim_document
+  examples: |
+    - Paano ko makukuha ang mga nirequest kong dokumento
+    - Paano ko makukuha ang mga nirequest kong [barangay id](document)?
+    - Pano kunin yung dokumento
+    - Pano kunin yung [business permit](document)?
+    = Saan ko kukunin ang dokumento ko
+    = Saan ko kukunin ang [barangay clearance](document)?
+    - Paano ang proseso ng pagkuha ng dokumento ko
+    - Paano ang proseso ng pagkuha ng [certificate of indgency](document)?
+
+- intent: f_report_concern
+  examples: |
+    - Paano mag report ng concern
+    - Anong proseso ng pag report ng concern
+    - Anong gagawin kung gusto ko mag report ng concern
+    - Paano mag file ng report>
+    - Anong kailangan kong gawin para mag report ng concern
+    - Gusto ko mag complain
+    - Gusto ko mag file ng complaint
+    - Paano mag file ng complaint
+
+- intent: f_change_profile
+  examples: |
+    - gusto ko palitan profile ko
+    - paano palitan profile ko
+    - paano ko mapapalitan ang impormasyon ko
+    - saan ko pwede palitan impormasyon ko
