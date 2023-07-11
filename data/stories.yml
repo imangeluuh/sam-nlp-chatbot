@@ -56,9 +56,18 @@ stories:
   - intent: deny
   - action: utter_ask_again
 
-- story: what requirements are needed
+- story: what requirements needed provided
   steps:
   - intent: ask_requirements
+  - slot_was_set:
+    - profile: barangay clearance
+  - action: requirements_needed
+
+- story: what requirements needed not provided
+  steps:
+  - intent: ask_requirements
+  - action: utter_ask_document
+  - intent: inform_document
   - action: requirements_needed
 
 - story: processing time
@@ -87,21 +96,21 @@ stories:
   - intent: f_request_docs
   - slot_was_set:
     - document: barangay id
-  - action: steps_request
+  - action: f_steps_request
 
 - story: fil request document not provided
   steps:
   - intent: f_ask_request
   - action: utter_f_ask_document
   - intent: inform_document
-  - action: steps_request
+  - action: f_steps_request
 
 - story: fil change profile provided
   steps:
   - intent: f_change_profile
   - slot_was_set:
     - profile: name
-  - action: change_profile_steps
+  - action: f_change_profile_steps
   - action: utter_f_did_that_help
 
 - story: fil change profile not provided
@@ -109,12 +118,11 @@ stories:
   - intent: f_change_profile
   - action: utter_f_provide_profile
   - intent: inform_profile
-  - action: change_profile_steps
-
+  - action: f_change_profile_steps
 
 - story: fil ask if it helps
   steps:
-  - action: steps_request
+  - action: f_steps_request
   - slot_was_set:
     - document: barangay id
   - action: utter_f_did_that_help
@@ -131,10 +139,19 @@ stories:
   - intent: f_deny
   - action: utter_f_ask_again
 
-- story: fil what requirements are needed
+- story: fil what requirements needed provided
   steps:
   - intent: f_ask_requirements
-  - action: requirements_needed
+  - slot_was_set:
+    - profile: barangay clearance
+  - action: f_requirements_needed
+
+- story: fil what requirements needed not provided
+  steps:
+  - intent: f_ask_requirements
+  - action: utter_f_ask_document
+  - intent: inform_document
+  - action: f_requirements_needed
 
 - story: fil processing time
   steps:

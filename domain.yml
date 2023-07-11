@@ -145,6 +145,9 @@ actions:
   - steps_request
   - requirements_needed
   - change_profile_steps
+  - f_steps_request
+  - f_requirements_needed
+  - f_change_profile_steps
 
 session_config:
   session_expiration_time: 60
